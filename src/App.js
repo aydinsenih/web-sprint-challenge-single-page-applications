@@ -78,7 +78,7 @@ const App = () => {
     <div>
       <header>
         <nav>
-          <h1 className="header">Lambda Eats</h1>
+          <h1 className="header-text">Lambda Eats</h1>
           <div className="nav-links">
             <Link to="/">Home</Link>
             <Link to="/pizza">Order Pizza</Link>

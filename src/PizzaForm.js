@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export default function PizzaForm({values, change, submit, disabled, errors}){
 
@@ -20,7 +21,7 @@ export default function PizzaForm({values, change, submit, disabled, errors}){
                     <div className="error">{errors.name}</div>
                     <div className="error">{errors.size}</div>
                 </div>
-                <div className="form-group inputs" style={{display:"flex", flexDirection:"column", justifyContent:"center", textAlign:'center'}}>
+                <FormContainer>
                     <label>
                         Name<br/>
                         <input 
@@ -81,13 +82,24 @@ export default function PizzaForm({values, change, submit, disabled, errors}){
                         <input 
                             value={values.specialInst}
                             onChange={onChange}
-                            name="speacialInst"
+                            name="specialInst"
                             type="text"
                             />
                     </label>
                     <button id="submitButton" disabled={disabled}>Submit</button>
-                </div>
+                </FormContainer>
             </div>
         </form>
     )
 }
+
+const FormContainer = styled.div`
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    label{
+        margin: 5px;
+    }
+`;
